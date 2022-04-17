@@ -1,0 +1,70 @@
+body{
+    min-height:100%;
+    padding:0;
+    margin:0;
+    background-color:#2A4E6C;
+}
+#tela{
+    padding:0; position:absolute; top:0; bottom:0; left:0; right:0;
+}
+#conteudo{
+    position:relative;
+    top:50px;
+}
+.conteudo{
+    display:none;
+}
+#rodape{
+    background-color:#222;
+    width:100%;
+}
+.menu{
+    font-family:"Verdana";
+    font-size:20px;
+}
+.panel{
+    margin:20px;
+    float:left;
+    display:inline-block;
+}
+.panel-half-size{
+    width: -webkit-calc(50% - 40px);
+    width: -moz-calc(50% - 40px);
+    width: calc(50% - 40px);
+}
+.panel-body{
+    text-align:center;
+}
+#div-input-medicamentos{
+    display:inline-block;
+    width:100%;
+}
+#div-input-paciente{
+    display:inline-block;
+    width:100%;
+}
+#div-salvar-receita{
+    width: -webkit-calc(100% - 40px);
+    width: -moz-calc(100% - 40px);
+    width: calc(100% - 40px);
+    margin:20px;
+    float:left;
+    display:inline-block;
+    text-align:center;
+}
+.panel-title{
+    display:inline-block;
+}
+.link-right{
+    float:right;
+}
+.link-right:hover{
+    color:#aaa;
+    cursor:hand;
+    cursor:pointer;
+}
+.btn{
+    width:150px;
+    margin-left:20px;
+    margin-right:20px;
+}
