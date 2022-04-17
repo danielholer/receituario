@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <title>Receituário</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
+    
+    
+    <!-- Incluindo o CSS do Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="bootstrap/js/jquery-1.11.2.min.js"></script>
+    <script src="javaScript.js"></script>
+
+    <link rel="stylesheet" href="jQueryUI/jquery-ui.min.css">
+    <script src="jQueryUI/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="Style.css" />
+
+    <script src="classes/medicamento.js"></script>
+    <script src="classes/paciente.js"></script>
+    <script src="classes/receita.js"></script>
+    
+    <script src='pdfmake/pdfmake.min.js'></script>
+    <script src='pdfmake/vfs_fonts.js'></script>	
+
+</head>
+<body>
+    <div id="tela">
+        <div id="topo">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">    
+                        <a id="menu-receita" class="navbar-brand menu" href="#">Receita</a>
+                        <a id="menu-paciente" class="navbar-brand menu" href="#">Pacientes</a>
+                        <a id="menu-medicamento" class="navbar-brand menu" href="#">Medicamentos</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="conteudo">
+            <div id="receita" class="sub-conteudo"></div>
+            <div id="paciente" class="sub-conteudo"></div>
+            <div id="medicamento" class="sub-conteudo"></div>
+        </div>
+        <!--<div id="rodape" class="navbar-fixed-bottom">
+        </div>-->
+    </div>
+    <script>
+        $(document).ready(function(){
+            loadPage("receita", "receita.html");
+            loadPage("paciente", "paciente.html");
+            loadPage("medicamento", "medicamento.html");
+            $(".menu").click(function(){
+                var div  = $(this).attr("id");
+                var div = div.split("-").pop();
+                hideAll();
+                //loadPage(div, div + ".html");
+                $("#" + div).show();
+                $("#" + div + " input:text").first().focus();
+            });
+
+            $( "#menu-receita" ).click();
+        });
+        
+        function loadPage(div,page){
+            $("#" + div).load(page);
+            $("#" + div).hide();
+        }
+
+        function hideAll(){
+            $(".sub-conteudo").hide();
+        }
+
+    </script>
+</body>
+
+
+</html>
