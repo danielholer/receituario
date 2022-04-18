@@ -26,7 +26,7 @@ function Paciente(prmId, prmNome, prmCPF, prmDtNascimento, prmEmail){
      
     this.salvaPaciente = function(){
         if(this.checkForm()){
-            $.post( "wsSetPaciente", 
+            $.post( "wsSetPaciente.php", 
                 {
                     id: id,
                     nome: nome, 
@@ -59,7 +59,7 @@ function Paciente(prmId, prmNome, prmCPF, prmDtNascimento, prmEmail){
         var arrPaciente = [];
 
         //busca os medicamentos cadastrados no BD
-        $.getJSON( "wsGetPacientes", function( data ) {
+        $.getJSON( "wsGetPacientes.json", function( data ) {
             $.each( data, function( key, val ) {
                 tagsPaciente.push( val.nome );
                 arrPaciente[val.nome] = new Paciente(val.id, val.nome, val.cpf, val.data_nasc, val.email);

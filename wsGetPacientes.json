@@ -3,14 +3,14 @@
     "id":"1",
     "nome":"Daniel",
     "cpf":"12345678910",
-    "data_nasc":"01\/01\/1900",
+    "data_nasc":"01/01/1900",
     "email":"teste@teste.com.br"
   },
   {
     "id":"2",
-    "nome":"Jo\u00e3o",
+    "nome":"João",
     "cpf":"98765432100",
-    "data_nasc":"10\/01\/1981",
+    "data_nasc":"10/01/1981",
     "email":"teste@gmail.com"
   }
 ]
